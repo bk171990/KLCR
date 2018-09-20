@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title class="my-custom-color">
+      KrushnamaiLuxury Car rental
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="tutorial-page">
+
+
+	<ion-slides pager>
+    <ion-slide *ngFor="let slide of slides">
+      <ion-toolbar>
+        
+      </ion-toolbar>
+      <img [src]="slide.image" class="slide-image"/>
+      <h2 class="slide-title" [innerHTML]="slide.title"></h2>
+      <p [innerHTML]="slide.description"></p>
+    </ion-slide>
+   
+  </ion-slides>
+     
+    
+   
+       
+     
+   
+  <button ion-button full (click)="OpenBookPage()">Book Now</button>
+
+
+  <ion-card  *ngFor="let team of allCars">
+  	<ion-card-title>{{ team.total_vehicle_name }}</ion-card-title>
+  </ion-card>
+</ion-content>
